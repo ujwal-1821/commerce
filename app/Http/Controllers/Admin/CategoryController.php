@@ -17,7 +17,9 @@ class CategoryController extends Controller
     {
         $categories = new Category();
         $categories->category_name = $request->category;
+        
         $categories->save();
+
         return redirect()->route('view_category');
     }
 
